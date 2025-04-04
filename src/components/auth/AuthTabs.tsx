@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface AuthTabsProps {
@@ -7,23 +8,23 @@ interface AuthTabsProps {
 
 const AuthTabs: React.FC<AuthTabsProps> = ({ activeTab, onTabChange }) => {
   return (
-    <div className="flex min-h-14 w-full items-stretch text-base text-[rgba(27,67,77,1)] tracking-[-0.32px] flex-wrap max-md:max-w-full">
+    <div className="flex w-full items-stretch text-base text-[rgba(27,67,77,1)] tracking-[-0.32px] font-sans">
       <button
         onClick={() => onTabChange("create")}
-        className={`self-stretch min-w-60 gap-2 font-extrabold h-full flex-1 shrink basis-[0%] p-2 ${
+        className={`flex-1 gap-2 font-extrabold p-4 border-b-2 transition-all ${
           activeTab === "create"
-            ? "border-b-[6px] border-[rgba(195,244,75,1)]"
-            : ""
+            ? "border-[rgba(195,244,75,1)]"
+            : "border-transparent"
         }`}
       >
         Create New Profile
       </button>
       <button
         onClick={() => onTabChange("login")}
-        className={`self-stretch min-w-60 gap-2 font-normal whitespace-nowrap h-full flex-1 shrink basis-[0%] p-2 ${
+        className={`flex-1 gap-2 font-normal p-4 border-b-2 transition-all ${
           activeTab === "login"
-            ? "border-b-[6px] border-[rgba(195,244,75,1)]"
-            : ""
+            ? "border-[rgba(195,244,75,1)]"
+            : "border-transparent"
         }`}
       >
         Login
