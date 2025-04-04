@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import FormInput from "./FormInput";
 import SocialLogin from "./SocialLogin";
 import AuthTabs from "./AuthTabs";
@@ -27,6 +28,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onTabChange }) => {
     rememberMe: false,
   });
   const [errors, setErrors] = useState<LoginFormErrors>({});
+  const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -70,6 +72,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ onTabChange }) => {
   const navigateToCreateAccount = (e: React.MouseEvent) => {
     e.preventDefault();
     handleTabChange("create");
+  };
+
+  const navigateToForgotPassword = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate("/forgot-password");
   };
 
   return (
@@ -124,7 +131,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ onTabChange }) => {
                   Remember me
                 </label>
               </div>
-              <a href="#" className="text-[rgba(187,156,255,1)] font-medium">
+              <a
+                href="#"
+                onClick={navigateToForgotPassword}
+                className="text-[rgba(187,156,255,1)] font-medium"
+              >
                 Forgot password?
               </a>
             </div>
