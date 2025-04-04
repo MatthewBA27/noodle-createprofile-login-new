@@ -80,7 +80,7 @@ const ForgotPassword: React.FC = () => {
               <a
                 href="#"
                 onClick={navigateToLogin}
-                className="text-[rgba(187,156,255,1)] font-medium"
+                className="text-[rgba(187,156,255,1)] font-extrabold"
               >
                 Back to login
               </a>
@@ -104,7 +104,7 @@ const ForgotPassword: React.FC = () => {
               <a
                 href="#"
                 onClick={navigateToLogin}
-                className="text-[rgba(187,156,255,1)] font-medium"
+                className="text-[rgba(187,156,255,1)] font-extrabold"
               >
                 Return to login
               </a>
