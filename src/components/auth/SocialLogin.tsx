@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const SocialLogin: React.FC = () => {
@@ -15,7 +16,7 @@ const SocialLogin: React.FC = () => {
       </div>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-white border self-center flex min-h-10 items-center text-sm text-[rgba(27,67,77,1)] justify-center mt-8 px-6 py-2 rounded-lg border-[rgba(242,242,242,1)] border-solid max-md:px-5"
+        className="bg-white border self-center flex min-h-10 items-center text-sm text-[rgba(27,67,77,1)] justify-center mt-6 px-6 py-2 rounded-lg border-[rgba(242,242,242,1)] border-solid max-md:px-5 transition-all duration-300 hover:bg-gray-50 hover:shadow-md hover:border-[rgba(211,194,248,1)]"
       >
         <div className="flex items-center gap-4">
           <svg

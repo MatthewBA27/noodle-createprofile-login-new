@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import FormInput from "./FormInput";
 import SocialLogin from "./SocialLogin";
@@ -67,10 +68,10 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="font-sans">
       <AuthTabs activeTab={activeTab} onTabChange={handleTabChange} />
 
-      <div className="w-full mt-8 max-md:max-w-full">
+      <div className="w-full mt-6 max-md:max-w-full">
         <div className="w-full max-md:max-w-full">
           <div className="w-full max-md:max-w-full">
             <div className="flex w-full flex-col items-stretch justify-center max-md:max-w-full">
@@ -82,7 +83,7 @@ const LoginForm: React.FC = () => {
               </p>
             </div>
 
-            <div className="w-full text-sm tracking-[-0.28px] mt-8 max-md:max-w-full space-y-4">
+            <div className="w-full text-sm tracking-[-0.28px] mt-6 max-md:max-w-full space-y-4">
               <FormInput
                 label="Email"
                 placeholder="Enter your email address"
@@ -104,7 +105,7 @@ const LoginForm: React.FC = () => {
               />
             </div>
 
-            <div className="flex w-full items-center text-sm text-[rgba(137,137,137,1)] font-normal tracking-[-0.28px] justify-between mt-8 max-md:max-w-full">
+            <div className="flex w-full items-center text-sm text-[rgba(137,137,137,1)] font-normal tracking-[-0.28px] justify-between mt-6 max-md:max-w-full">
               <div className="self-stretch flex items-center gap-[11px] my-auto">
                 <input
                   type="checkbox"
@@ -126,7 +127,7 @@ const LoginForm: React.FC = () => {
 
           <button
             type="submit"
-            className="self-stretch bg-[rgba(211,194,248,1)] min-h-10 w-full gap-2 overflow-hidden text-sm text-[rgba(27,67,77,1)] font-extrabold tracking-[-0.28px] mt-12 px-[107px] py-[11px] rounded-lg max-md:max-w-full max-md:mt-10 max-md:px-5"
+            className="self-stretch bg-[rgba(211,194,248,1)] min-h-10 w-full gap-2 overflow-hidden text-sm text-[rgba(27,67,77,1)] font-extrabold tracking-[-0.28px] mt-8 px-[107px] py-[11px] rounded-lg max-md:max-w-full max-md:mt-8 max-md:px-5 transition-all duration-300 hover:bg-[rgba(187,156,255,1)] hover:shadow-md"
           >
             Sign In
           </button>
@@ -135,7 +136,7 @@ const LoginForm: React.FC = () => {
         <SocialLogin />
       </div>
 
-      <div className="text-[rgba(137,137,137,1)] text-sm font-normal tracking-[-0.28px] text-center mt-8 max-md:max-w-full">
+      <div className="text-[rgba(137,137,137,1)] text-sm font-normal tracking-[-0.28px] text-center mt-6 max-md:max-w-full">
         Don't have an account?{" "}
         <a
           href="#"
