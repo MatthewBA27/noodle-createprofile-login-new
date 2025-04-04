@@ -1,13 +1,12 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import AuthLayout from "@/components/auth/AuthLayout";
+import CreateAccountForm from "@/components/auth/CreateAccountForm";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <AuthLayout logoSrc="https://cdn.builder.io/api/v1/image/assets/27e72780e13b45c68e2002845d395d80/9b12030efac60a0b627d4e36d4f07b7c860a871c?placeholderIfAbsent=true">
+      <CreateAccountForm />
+    </AuthLayout>
   );
 };
 
