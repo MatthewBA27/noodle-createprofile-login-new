@@ -31,9 +31,9 @@ const FormInput: React.FC<FormInputProps> = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`self-stretch bg-white border min-h-10 w-full gap-2 overflow-hidden text-[rgba(27,67,77,1)] font-sans font-normal mt-2 pl-2 pr-3 py-[11px] rounded-lg border-[rgba(137,137,137,1)] border-solid max-md:max-w-full focus:outline-none focus:border-[rgba(211,194,248,1)] focus:border-2 focus:ring-1 focus:ring-[rgba(211,194,248,0.3)] transition-all duration-200 
+        className={`self-stretch bg-white border min-h-10 w-full gap-2 overflow-hidden text-[rgba(27,67,77,1)] font-sans font-normal mt-2 pl-2 pr-3 py-[11px] rounded-lg border-[rgba(137,137,137,1)] border-solid max-md:max-w-full focus:outline-none focus:border-[rgba(27,67,77,1)] focus:border-2 focus:ring-1 focus:ring-[rgba(27,67,77,0.3)] transition-all duration-200 
         ${error ? "border-red-500" : ""}
-        [&:-webkit-autofill]:bg-[#F1F1F1] [&:-webkit-autofill]:shadow-[0_0_0_30px_#F1F1F1_inset] [&:-webkit-autofill]:transition-colors [&:-webkit-autofill:focus]:shadow-[0_0_0_30px_white_inset] [&:-webkit-autofill:focus]:border-[rgba(211,194,248,1)] [&:-webkit-autofill:focus]:border-2`}
+        [&:-webkit-autofill]:bg-[#F1F1F1] [&:-webkit-autofill]:shadow-[0_0_0_30px_#F1F1F1_inset] [&:-webkit-autofill]:transition-colors [&:-webkit-autofill:focus]:shadow-[0_0_0_30px_white_inset] [&:-webkit-autofill:focus]:border-[rgba(27,67,77,1)] [&:-webkit-autofill:focus]:border-2`}
       />
       {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
     </div>
