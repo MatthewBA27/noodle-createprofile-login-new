@@ -170,7 +170,7 @@ const CreateAccountForm: React.FC = () => {
 
           <button
             type="submit"
-            className="self-stretch bg-[rgba(211,194,248,1)] min-h-10 w-full gap-2 overflow-hidden text-sm text-[rgba(27,67,77,1)] font-extrabold tracking-[-0.28px] mt-8 px-[107px] py-[11px] rounded-lg max-md:max-w-full max-md:mt-8 max-md:px-5 transition-all duration-300 hover:bg-[rgba(187,156,255,1)] hover:shadow-md"
+            className="self-stretch bg-[rgba(211,194,248,1)] min-h-10 w-full gap-2 overflow-hidden text-sm text-[rgba(27,67,77,1)] font-extrabold tracking-[-0.28px] mt-8 px-[107px] py-[11px] rounded-lg max-md:max-w-full max-md:mt-8 max-md:px-5 transition-all duration-300 hover:bg-[#D3C2F8] hover:shadow-md"
           >
             Sign Up
           </button>

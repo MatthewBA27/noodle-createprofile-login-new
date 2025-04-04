@@ -9,11 +9,6 @@ const SocialLogin: React.FC = () => {
 
   return (
     <div className="flex w-full flex-col items-stretch font-medium mt-6 max-md:max-w-full">
-      <div className="flex w-full items-center gap-[17px] text-lg text-[rgba(137,137,137,1)] whitespace-nowrap flex-wrap max-md:max-w-full">
-        <div className="border self-stretch w-[263px] shrink-0 max-w-full h-px my-auto border-[rgba(242,242,242,1)] border-solid" />
-        <div className="self-stretch">Or</div>
-        <div className="border self-stretch w-[263px] shrink-0 max-w-full h-px my-auto border-[rgba(242,242,242,1)] border-solid" />
-      </div>
       <button
         onClick={handleGoogleSignIn}
         className="bg-white border self-center flex min-h-10 items-center text-sm text-[rgba(27,67,77,1)] justify-center mt-6 px-6 py-2 rounded-lg border-[rgba(242,242,242,1)] border-solid max-md:px-5 transition-all duration-300 hover:bg-gray-50 hover:shadow-md hover:border-[rgba(211,194,248,1)]"
