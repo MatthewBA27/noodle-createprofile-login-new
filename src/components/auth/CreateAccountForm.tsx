@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import FormInput from "./FormInput";
 import SocialLogin from "./SocialLogin";
 import AuthTabs from "./AuthTabs";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface FormData {
   schoolName: string;
@@ -151,16 +152,28 @@ const CreateAccountForm: React.FC<CreateAccountFormProps> = ({ onTabChange }) =>
             </div>
 
             <div className="flex w-full items-center text-sm text-[rgba(137,137,137,1)] font-normal tracking-[-0.28px] justify-between mt-6 max-md:max-w-full">
-              <div className="self-stretch flex items-center gap-[11px] my-auto">
-                <input
-                  type="checkbox"
+              <div className="self-stretch flex items-center gap-3 my-auto">
+                <Checkbox 
                   id="agreeToTerms"
-                  name="agreeToTerms"
                   checked={formData.agreeToTerms}
-                  onChange={handleInputChange}
-                  className="bg-white border self-stretch w-6 h-6 shrink-0 gap-2 my-auto rounded-lg border-[rgba(137,137,137,1)] border-solid"
+                  onCheckedChange={(checked) => {
+                    setFormData({
+                      ...formData,
+                      agreeToTerms: checked === true,
+                    });
+                  }}
+                  className="rounded-full border-[rgba(137,137,137,1)] data-[state=checked]:bg-[rgba(187,156,255,1)] data-[state=checked]:border-[rgba(187,156,255,1)]"
                 />
-                <label htmlFor="agreeToTerms" className="self-stretch my-auto">
+                <label 
+                  htmlFor="agreeToTerms" 
+                  className="self-stretch my-auto cursor-pointer"
+                  onClick={() => {
+                    setFormData({
+                      ...formData,
+                      agreeToTerms: !formData.agreeToTerms,
+                    });
+                  }}
+                >
                   I agree to the{" "}
                   <span className="font-medium underline cursor-pointer">
                     terms and policy
