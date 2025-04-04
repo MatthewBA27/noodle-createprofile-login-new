@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import FormInput from "./FormInput";
 import SocialLogin from "./SocialLogin";
@@ -20,7 +19,11 @@ interface FormErrors {
   agreeToTerms?: string;
 }
 
-const CreateAccountForm: React.FC = () => {
+interface CreateAccountFormProps {
+  onTabChange: (tab: "create" | "login") => void;
+}
+
+const CreateAccountForm: React.FC<CreateAccountFormProps> = ({ onTabChange }) => {
   const [activeTab, setActiveTab] = useState<"create" | "login">("create");
   const [formData, setFormData] = useState<FormData>({
     schoolName: "",
@@ -81,11 +84,12 @@ const CreateAccountForm: React.FC = () => {
 
   const handleTabChange = (tab: "create" | "login") => {
     setActiveTab(tab);
+    onTabChange(tab);
   };
 
   const navigateToLogin = (e: React.MouseEvent) => {
     e.preventDefault();
-    setActiveTab("login");
+    handleTabChange("login");
   };
 
   return (

@@ -15,7 +15,11 @@ interface LoginFormErrors {
   password?: string;
 }
 
-const LoginForm: React.FC = () => {
+interface LoginFormProps {
+  onTabChange: (tab: "create" | "login") => void;
+}
+
+const LoginForm: React.FC<LoginFormProps> = ({ onTabChange }) => {
   const [activeTab, setActiveTab] = useState<"create" | "login">("login");
   const [formData, setFormData] = useState<LoginFormData>({
     email: "",
@@ -60,11 +64,12 @@ const LoginForm: React.FC = () => {
 
   const handleTabChange = (tab: "create" | "login") => {
     setActiveTab(tab);
+    onTabChange(tab);
   };
 
   const navigateToCreateAccount = (e: React.MouseEvent) => {
     e.preventDefault();
-    setActiveTab("create");
+    handleTabChange("create");
   };
 
   return (
@@ -76,7 +81,7 @@ const LoginForm: React.FC = () => {
           <div className="w-full max-md:max-w-full">
             <div className="flex w-full flex-col items-stretch justify-center max-md:max-w-full">
               <h1 className="text-[rgba(27,67,77,1)] text-[32px] font-extrabold tracking-[-0.64px] max-md:max-w-full">
-                Welcome back
+                Login to your school dashboard
               </h1>
               <p className="text-[rgba(137,137,137,1)] text-xl font-normal tracking-[-0.4px] mt-1.5 max-md:max-w-full">
                 Please enter your credentials to access your account
