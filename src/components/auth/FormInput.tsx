@@ -47,10 +47,10 @@ const FormInput: React.FC<FormInputProps> = ({
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[rgba(137,137,137,1)] hover:text-[rgba(27,67,77,1)] transition-colors"
             aria-label={showPassword ? "Hide password" : "Show password"}
           >
-            {showPassword ? (
-              <EyeOff size={18} className="mt-1" />
-            ) : (
+            {!showPassword ? (
               <Eye size={18} className="mt-1" />
+            ) : (
+              <EyeOff size={18} className="mt-1" />
             )}
           </button>
         )}
